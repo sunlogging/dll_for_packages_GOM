@@ -29,7 +29,6 @@ std::string get_type(std::string namefile) {
 }
 std::string set_type(std::string namefile) {
 	std::string type = get_type(namefile);
-	std::cout << "-=" << type;
 	if (type == "py") return "python ";
 	else if (type == "js") return "node ";
 	else if (type == "exe" || "bat") return "";
@@ -50,8 +49,5 @@ void run(std::vector<char*> argv) {
 
 extern "C" __declspec(dllexport)
 void exec(std::vector<char*> argv) {
-	for (int i = 0; i < argv.size(); i++) {
-		std::cout << argv[i] << "...";
-	}
 	run(argv);
 }
