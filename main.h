@@ -43,7 +43,6 @@ void run(std::vector<char*> argv) {
 		}
 		command += std::string(argv[index]) + " ";
 	}
-	std::cout << "\n" << command << "\n";
 	system(command.c_str());
 }
 
